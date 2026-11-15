@@ -3,7 +3,7 @@
 Unpaired image-to-image translation with a CycleGAN, implemented in TensorFlow / Keras and trained on the Horse2Zebra dataset. The model never saw a horse and a zebra in the same scene, yet it learns to swap one for the other.
 
 - **Live demo:** https://huggingface.co/spaces/YOUR_HF_USERNAME/cyclegan-horse-zebra
-- **Project page:** https://YOUR_GITHUB_USERNAME.github.io/cyclegan-horse2zebra/
+- **Project page:** https://tahir64506.github.io/cyclegan-horse2zebra/
 - **Model weights:** `G.weights.h5` and `F.weights.h5` (about 46 MB each) are on the Hugging Face Space, not in this repository.
 
 ## Results
