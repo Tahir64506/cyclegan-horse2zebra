@@ -175,7 +175,6 @@ with gr.Blocks(title="CycleGAN Horse ↔ Zebra") as demo:
 - **256 x 256**: the safest quality, but the image is squashed to a square.
 - Photos much larger than 512 px can get finer, patchier stripes, because the model learned stripe size at 256 px.
 - JPG, PNG and WEBP all work. Clear photos of one horse or zebra give the best results.
-- This Space runs on a CPU, so large images take a few seconds.
 """)
 
     with gr.Tab("Results"):

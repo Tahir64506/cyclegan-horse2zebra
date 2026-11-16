@@ -2,9 +2,9 @@
 
 Unpaired image-to-image translation with a CycleGAN, implemented in TensorFlow / Keras and trained on the Horse2Zebra dataset. The model never saw a horse and a zebra in the same scene, yet it learns to swap one for the other.
 
-- **Live demo:** https://huggingface.co/spaces/YOUR_HF_USERNAME/cyclegan-horse-zebra
-- **Project page:** https://tahir64506.github.io/cyclegan-horse2zebra/
-- **Model weights:** `G.weights.h5` and `F.weights.h5` (about 46 MB each) are on the Hugging Face Space, not in this repository.
+- **Project page (interactive results):** https://huggingface.co/spaces/Tahir64506/cyclegan-horse-zebra (also published with GitHub Pages from `docs/`)
+- **Try it yourself:** open `notebooks/cyclegan_colab_demo.ipynb` in Colab. It downloads the weights and launches the app, no Drive needed.
+- **Model weights:** https://huggingface.co/Tahir64506/cyclegan-horse-zebra-weights (`G.weights.h5` and `F.weights.h5`, about 46 MB each). They are not stored in this repository.
 
 ## Results
 
@@ -35,7 +35,7 @@ Two ResNet generators translate in opposite directions (G: horse to zebra, F: ze
 **Notebooks** (`notebooks/`)
 - `cyclegan_horse2zebra_colab_with_results.ipynb`: the full training code with all results saved in the notebook, so you can read it without running anything.
 - `cyclegan_horse2zebra_kaggle.ipynb`: the Kaggle version of the training code.
-- `cyclegan_gradio_app.ipynb`: launches the demo app in Colab from saved weights.
+- `cyclegan_colab_demo.ipynb`: downloads the trained weights from Hugging Face and launches the demo app.
 
 **Train locally**
 ```bash
@@ -45,7 +45,7 @@ python train.py          # edit EPOCHS at the top; resumes automatically if a ch
 Training takes roughly 10 minutes per epoch on a T4 GPU. Output goes to `cyclegan_output/` (or set `CYCLEGAN_OUTPUT_DIR`).
 
 **Run the demo app locally**
-1. Put `G.weights.h5` and `F.weights.h5` in a `weights/` folder.
+1. Download `G.weights.h5` and `F.weights.h5` from https://huggingface.co/Tahir64506/cyclegan-horse-zebra-weights into a `weights/` folder.
 2. `python app.py`
 
 The generator accepts any image size. By default your image is used at its own size (up to a limit you choose), with each side a multiple of 4.
