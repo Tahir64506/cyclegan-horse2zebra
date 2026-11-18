@@ -1,5 +1,6 @@
 tensorflow==2.20.0
 tensorflow-datasets
+protobuf>=6.31.1
 matplotlib
 gradio
 numpy

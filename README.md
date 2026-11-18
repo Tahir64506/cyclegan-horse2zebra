@@ -2,8 +2,10 @@
 
 Unpaired image-to-image translation with a CycleGAN, implemented in TensorFlow / Keras and trained on the Horse2Zebra dataset. The model never saw a horse and a zebra in the same scene, yet it learns to swap one for the other.
 
-- **Project page (interactive results):** https://huggingface.co/spaces/Tahir64506/cyclegan-horse-zebra (also published with GitHub Pages from `docs/`)
-- **Try it yourself:** open `notebooks/cyclegan_colab_demo.ipynb` in Colab. It downloads the weights and launches the app, no Drive needed.
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Tahir64506/cyclegan-horse2zebra/blob/main/notebooks/cyclegan_colab_demo.ipynb)
+
+- **Project page (interactive results):** https://huggingface.co/spaces/Tahir64506/cyclegan-horse-zebra, also at https://tahir64506.github.io/cyclegan-horse2zebra/
+- **Try it yourself:** use the Colab button above. It downloads the weights and launches the app, no Drive needed.
 - **Model weights:** https://huggingface.co/Tahir64506/cyclegan-horse-zebra-weights (`G.weights.h5` and `F.weights.h5`, about 46 MB each). They are not stored in this repository.
 
 ## Results
@@ -50,6 +52,17 @@ Training takes roughly 10 minutes per epoch on a T4 GPU. Output goes to `cyclega
 
 The generator accepts any image size. By default your image is used at its own size (up to a limit you choose), with each side a multiple of 4.
 
+## Repository layout
+
+```
+app.py             Gradio demo app (any image size)
+train.py           training script (resumes automatically from a checkpoint)
+requirements.txt   Python dependencies
+notebooks/         training notebook with saved results, Kaggle notebook, Colab demo
+docs/index.html    project page (also served by GitHub Pages)
+assets/            result images and loss curves used in this README
+```
+
 ## Limitations
 
 - Horse to zebra works best on clear animals in simple scenes. Distant herds and busy backgrounds get smeared stripes.
@@ -63,4 +76,4 @@ Based on Zhu, Park, Isola and Efros, [Unpaired Image-to-Image Translation using 
 
 ## License
 
-Add a license of your choice here (for example MIT) before publishing.
+Released under the MIT License. See [LICENSE](LICENSE).
